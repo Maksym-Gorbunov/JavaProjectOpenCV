@@ -1,5 +1,6 @@
 package com.pages.page2;
 
+import com.db.DB;
 import com.gui.Gui;
 
 import javax.swing.*;
@@ -50,7 +51,7 @@ public class Page2 {
   }
 
   private void temp() {
-//    DB.populateContactBook();
+    DB.populateContactBook();
 
 
     contactBook.add(new Contact("Max", "Fry", "max@mail.com", "0766533"));
@@ -112,8 +113,6 @@ public class Page2 {
         edit = true;
         Contact contact = (Contact) contactsComboBox.getSelectedItem();
         editContact = contact;
-//        currentContact = contact;
-
         nameTextField.setText(contact.getName());
         surnameTextField.setText(contact.getSurname());
         phoneTextField.setText(contact.getPhone());
