@@ -27,7 +27,9 @@ public class DB {
 
 
   public static void populateContactBook() {
-    printContacts();
+//    printContacts();
+//    createCollection("Contacts");
+      deleteCollection("Contacts");
 //    for (String collectionName : database.listCollectionNames()) {
 //      System.out.println(collectionName);
 //    }
@@ -44,6 +46,20 @@ public class DB {
     }
     */
   }
+
+  // Create collection
+  static void createCollection(String collectionName) {
+    MongoCollection<Document> collection = database.getCollection(collectionName);
+    collection.insertOne(new Document());
+  }
+
+  // Delete collection
+  static void deleteCollection(String collectionName) {
+    MongoCollection<Document> collection = database.getCollection(collectionName);
+    collection.drop();
+//    collection = database.getCollection(collectionName);
+  }
+
 
 
 
@@ -68,17 +84,9 @@ public class DB {
     }
   }
 
-  // Create collection named 'customers'
-  static void createCustomers() {
-    MongoCollection<Document> collection = database.getCollection("customers");
-    collection.insertOne(new Document());
-  }
 
-  static void dropCustomers() {
-    MongoCollection<Document> collection = database.getCollection("customers");
-    collection.drop();
-    collection = database.getCollection("customers");
-  }
+
+
 
   static void hr() {
     System.out.println("===================================");
