@@ -6,9 +6,6 @@ import javax.swing.*;
 
 public class App {
   public static void main(String[] args) {
-    System.out.println(System.getProperty("java.library.path"));
-
-
     System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
     try {

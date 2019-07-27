@@ -1,5 +1,6 @@
 package com.pages.page1;
 
+import com.gui.Gui;
 import com.pages.Pages;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
@@ -23,12 +24,15 @@ public class Page1 extends JFrame implements Pages {
   private Graphics graphics;
   private boolean status = false;
   private Color defaultPanelColor;
+  private Gui gui;
 
-  public Page1(JButton startButton, JButton pauseButton, JButton testButton, JPanel webcamPanel) {
-    this.startButton = startButton;
-    this.pauseButton = pauseButton;
-    this.testButton = testButton;
-    this.webcamPanel = webcamPanel;
+//  public Page1(JButton startButton, JButton pauseButton, JButton testButton, JPanel webcamPanel) {
+  public Page1(final Gui gui) {
+    this.gui = gui;
+    this.startButton = gui.getStartButton1();
+    this.pauseButton = gui.getPauseButton1();
+    this.testButton = gui.getTestButton1();
+    this.webcamPanel = gui.getWebcamPanel1();
 
     defaultPanelColor = webcamPanel.getBackground();
 
@@ -46,8 +50,10 @@ public class Page1 extends JFrame implements Pages {
         t.setDaemon(true);
         myThread.runnable = true;
         t.start();
-        startButton.setEnabled(false);  //start button
-        pauseButton.setEnabled(true);  // stop button
+        startButton.setEnabled(false);
+        pauseButton.setEnabled(true);
+        testButton.setEnabled(false);
+        gui.getPagesPanel().setEnabled(false);
       }
     });
 
@@ -59,6 +65,8 @@ public class Page1 extends JFrame implements Pages {
         pauseButton.setEnabled(false);
         startButton.setEnabled(true);
         webSource.release();
+        testButton.setEnabled(true);
+        gui.getPagesPanel().setEnabled(true);
       }
     });
 

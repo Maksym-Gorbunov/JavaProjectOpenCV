@@ -15,7 +15,7 @@ public class Gui extends JFrame {
   private JPanel pagePanel2;
   private JPanel pagePanel3;
   private JPanel mainPanel1;
-  private JPanel buttonsPannel1;
+  private JPanel buttonsPanel1;
   private JButton startButton1;
   private JButton pauseButton1;
   private JButton testButton1;
@@ -54,7 +54,8 @@ public class Gui extends JFrame {
     setResizable(false);
     setVisible(true);
 
-    page1 = new Page1(startButton1, pauseButton1, testButton1, webcamPanel1);
+    page1 = new Page1(Gui.this);
+//    page1 = new Page1(startButton1, pauseButton1, testButton1, webcamPanel1);
 //    page2 = new Page2(addContactButton2, printAllContactsButton2, deleteButton2, nameTextField2, phoneTextField2, emailTextField2, surnameTextField2);
     page2 = new Page2(Gui.this);
 
@@ -62,6 +63,8 @@ public class Gui extends JFrame {
 
 
   // Getters & Setters
+
+
   public JTabbedPane getPagesPanel() {
     return pagesPanel;
   }
@@ -82,8 +85,8 @@ public class Gui extends JFrame {
     return mainPanel1;
   }
 
-  public JPanel getButtonsPannel1() {
-    return buttonsPannel1;
+  public JPanel getButtonsPanel1() {
+    return buttonsPanel1;
   }
 
   public JButton getStartButton1() {
