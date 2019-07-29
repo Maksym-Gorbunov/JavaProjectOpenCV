@@ -51,7 +51,7 @@ public class Page2 {
   }
 
   private void temp() {
-    DB.populateContactBook();
+//    DB.populateContactBook();
 
 
     contactBook.add(new Contact("Max", "Fry", "max@mail.com", "0766533"));
