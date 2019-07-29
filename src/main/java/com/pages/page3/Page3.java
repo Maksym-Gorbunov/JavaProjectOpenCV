@@ -25,7 +25,6 @@ public class Page3  extends JFrame implements Pages {
   private File file;
   private JPanel pagePanel;
 
-
   public Page3(Gui gui) {
     this.gui = gui;
     this.pagePanel = gui.getPagePanel3();
@@ -37,13 +36,13 @@ public class Page3  extends JFrame implements Pages {
   }
 
   private void gui() {
-    add(imagePanel, BorderLayout.CENTER);
-    setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGTH);
-    setVisible(true);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setLocationRelativeTo(this);
+    pagePanel.add(imagePanel, BorderLayout.CENTER);
+//    setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGTH);
+//    setVisible(true);
+//    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    setLocationRelativeTo(this);
 
-    setJMenuBar(createMenuBar());
+    gui.setJMenuBar(createMenuBar());
 
   }
 
@@ -59,34 +58,34 @@ public class Page3  extends JFrame implements Pages {
     fileMenu.add(detectMenuItem);
     fileMenu.add(exitMenuItem);
 
-    loadMenuItem.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        if(fileChooser.showOpenDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION){
-          MainFrame.this.file = fileChooser.getSelectedFile();
-          // load the image
-          System.out.println("Image url: " + MainFrame.this.file);
-          MainFrame.this.imagePanel.loadImage(MainFrame.this.file);
-        }
-      }
-    });
-    detectMenuItem.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        // detect algorithm
-        MainFrame.this.faceDetection.detectFaces(MainFrame.this.file, MainFrame.this.imagePanel);
-      }
-    });
-    exitMenuItem.addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent arg0) {
-        int action = JOptionPane.showConfirmDialog(MainFrame.this, Constants.EXIT_WARNING);
-        if(action == JOptionPane.OK_OPTION){
-          System.gc();
-          System.exit(0);
-        }
-      }
-    });
+//    loadMenuItem.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        if(fileChooser.showOpenDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION){
+//          MainFrame.this.file = fileChooser.getSelectedFile();
+//          // load the image
+//          System.out.println("Image url: " + MainFrame.this.file);
+//          MainFrame.this.imagePanel.loadImage(MainFrame.this.file);
+//        }
+//      }
+//    });
+//    detectMenuItem.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent e) {
+//        // detect algorithm
+//        MainFrame.this.faceDetection.detectFaces(MainFrame.this.file, MainFrame.this.imagePanel);
+//      }
+//    });
+//    exitMenuItem.addActionListener(new ActionListener() {
+//      @Override
+//      public void actionPerformed(ActionEvent arg0) {
+//        int action = JOptionPane.showConfirmDialog(MainFrame.this, Constants.EXIT_WARNING);
+//        if(action == JOptionPane.OK_OPTION){
+//          System.gc();
+//          System.exit(0);
+//        }
+//      }
+//    });
 
     JMenu aboutMenu = new JMenu("About");
     JMenu helpMenu = new JMenu("Help");
