@@ -2,8 +2,10 @@ package com.gui;
 
 import javax.swing.*;
 
+import com.pages.Pages;
 import com.pages.page1.Page1;
 import com.pages.page2.Page2;
+import com.pages.page3.Page3;
 
 
 public class Gui extends JFrame {
@@ -42,8 +44,9 @@ public class Gui extends JFrame {
   private JButton saveButton2;
   private JButton cancelButton2;
 
-  private Page1 page1;
-  private Page2 page2;
+  private Pages page1;
+  private Pages page2;
+  private Pages page3;
 
   public Gui() {
     super("Application");
@@ -55,16 +58,11 @@ public class Gui extends JFrame {
     setVisible(true);
 
     page1 = new Page1(Gui.this);
-//    page1 = new Page1(startButton1, pauseButton1, testButton1, webcamPanel1);
-//    page2 = new Page2(addContactButton2, printAllContactsButton2, deleteButton2, nameTextField2, phoneTextField2, emailTextField2, surnameTextField2);
     page2 = new Page2(Gui.this);
-
+    page2 = new Page3(Gui.this);
   }
 
-
   // Getters & Setters
-
-
   public JTabbedPane getPagesPanel() {
     return pagesPanel;
   }
@@ -185,11 +183,13 @@ public class Gui extends JFrame {
     return contactsComboBox2;
   }
 
-  public Page1 getPage1() {
+  public Pages getPage1() {
     return page1;
   }
 
-  public Page2 getPage2() {
+  public Pages getPage2() {
     return page2;
   }
+
+  public Pages getPage3() { return page3; }
 }

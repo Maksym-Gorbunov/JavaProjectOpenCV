@@ -2,13 +2,14 @@ package com.pages.page2;
 
 import com.db.DB;
 import com.gui.Gui;
+import com.pages.Pages;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Page2 {
+public class Page2 implements Pages {
   private static final long serialVersionUID = 1L;
   private JButton addButton;
   private JButton printButton;
