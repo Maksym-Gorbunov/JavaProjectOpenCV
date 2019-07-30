@@ -79,16 +79,16 @@ public class Page3  extends JFrame implements Pages {
         faceDetection.detectFaces(file, imagePanel);
       }
     });
-//    exitMenuItem.addActionListener(new ActionListener() {
-//      @Override
-//      public void actionPerformed(ActionEvent arg0) {
-//        int action = JOptionPane.showConfirmDialog(MainFrame.this, Constants.EXIT_WARNING);
-//        if(action == JOptionPane.OK_OPTION){
-//          System.gc();
-//          System.exit(0);
-//        }
-//      }
-//    });
+    exitMenuItem.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent arg0) {
+        int action = JOptionPane.showConfirmDialog(gui, Constants.EXIT_WARNING);
+        if(action == JOptionPane.OK_OPTION){
+          System.gc();
+          System.exit(0);
+        }
+      }
+    });
 
     JMenu aboutMenu = new JMenu("About");
     JMenu helpMenu = new JMenu("Help");
