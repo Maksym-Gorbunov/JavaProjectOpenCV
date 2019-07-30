@@ -43,6 +43,7 @@ public class Gui extends JFrame {
   private JButton editButton2;
   private JButton saveButton2;
   private JButton cancelButton2;
+  private JPanel pagePanel4;
 
   private Pages page1;
   private Pages page2;

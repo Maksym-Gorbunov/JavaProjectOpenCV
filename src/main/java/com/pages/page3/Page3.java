@@ -68,6 +68,7 @@ public class Page3  extends JFrame implements Pages {
           // load the image
           System.out.println("Image url: " + file);
           imagePanel.loadImage(file);
+          gui.getPagesPanel().setSelectedComponent(gui.getPagePanel3());
         }
       }
     });
@@ -77,6 +78,7 @@ public class Page3  extends JFrame implements Pages {
         // detect algorithm
 //        MainFrame.this.faceDetection.detectFaces(MainFrame.this.file, MainFrame.this.imagePanel);
         faceDetection.detectFaces(file, imagePanel);
+        gui.getPagesPanel().setSelectedComponent(gui.getPagePanel3());
       }
     });
     exitMenuItem.addActionListener(new ActionListener() {
