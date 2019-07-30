@@ -5,6 +5,8 @@ import com.gui.Gui;
 import com.pages.Pages;
 import com.algoritm.FaceDetection;
 import com.constants.Constants;
+import javafx.scene.paint.Color;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.BorderLayout;
@@ -21,7 +23,7 @@ public class Page3  extends JFrame implements Pages {
   private ImageIcon transformedImageIcon;
   private ImagePanel imagePanel;
   private JFileChooser fileChooser;
-//  private FaceDetection faceDetection;
+  private FaceDetection faceDetection;
   private File file;
   private JPanel pagePanel;
 
@@ -30,19 +32,19 @@ public class Page3  extends JFrame implements Pages {
     this.pagePanel = gui.getPagePanel3();
     this.imagePanel = new ImagePanel();
     this.fileChooser = new JFileChooser();
-//    this.faceDetection = new FaceDetection();
+    this.faceDetection = new FaceDetection();
 
     gui();
   }
 
   private void gui() {
-    pagePanel.add(imagePanel, BorderLayout.CENTER);
+    gui.setJMenuBar(createMenuBar());
+    pagePanel.add(imagePanel);
+//    pagePanel.add(imagePanel, BorderLayout.CENTER);
 //    setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGTH);
 //    setVisible(true);
 //    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //    setLocationRelativeTo(this);
-
-    gui.setJMenuBar(createMenuBar());
 
   }
 
@@ -58,24 +60,25 @@ public class Page3  extends JFrame implements Pages {
     fileMenu.add(detectMenuItem);
     fileMenu.add(exitMenuItem);
 
-//    loadMenuItem.addActionListener(new ActionListener() {
-//      @Override
-//      public void actionPerformed(ActionEvent e) {
-//        if(fileChooser.showOpenDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION){
-//          MainFrame.this.file = fileChooser.getSelectedFile();
-//          // load the image
-//          System.out.println("Image url: " + MainFrame.this.file);
-//          MainFrame.this.imagePanel.loadImage(MainFrame.this.file);
-//        }
-//      }
-//    });
-//    detectMenuItem.addActionListener(new ActionListener() {
-//      @Override
-//      public void actionPerformed(ActionEvent e) {
-//        // detect algorithm
+    loadMenuItem.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        if(fileChooser.showOpenDialog(gui) == JFileChooser.APPROVE_OPTION){
+          file = fileChooser.getSelectedFile();
+          // load the image
+          System.out.println("Image url: " + file);
+          imagePanel.loadImage(file);
+        }
+      }
+    });
+    detectMenuItem.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        // detect algorithm
 //        MainFrame.this.faceDetection.detectFaces(MainFrame.this.file, MainFrame.this.imagePanel);
-//      }
-//    });
+        faceDetection.detectFaces(file, imagePanel);
+      }
+    });
 //    exitMenuItem.addActionListener(new ActionListener() {
 //      @Override
 //      public void actionPerformed(ActionEvent arg0) {

@@ -1,4 +1,4 @@
-package com.pages.page3;
+ package com.pages.page3;
 
 import com.constants.Constants;
 //import com.recognition.image.constants.Constants;
@@ -18,6 +18,8 @@ public class ImagePanel extends JPanel{
     setBorder(BorderFactory.createEmptyBorder(Constants.IMAGE_LABEL_BORDER, Constants.IMAGE_LABEL_BORDER,
             Constants.IMAGE_LABEL_BORDER, Constants.IMAGE_LABEL_BORDER));
     add(imageLabel, BorderLayout.CENTER);
+    setBackground(Color.ORANGE);
+    setSize(700, 500);
   }
 
   public void updadeImage(final Image image) {
