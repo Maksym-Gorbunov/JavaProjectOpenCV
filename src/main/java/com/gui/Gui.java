@@ -6,6 +6,7 @@ import com.pages.Pages;
 import com.pages.page1.Page1;
 import com.pages.page2.Page2;
 import com.pages.page3.Page3;
+import com.pages.page4.Page4;
 
 
 public class Gui extends JFrame {
@@ -44,10 +45,12 @@ public class Gui extends JFrame {
   private JButton saveButton2;
   private JButton cancelButton2;
   private JPanel pagePanel4;
+  private JPanel mainPanel4;
 
   private Pages page1;
   private Pages page2;
   private Pages page3;
+  private Pages page4;
 
   public Gui() {
     super("Application");
@@ -60,7 +63,8 @@ public class Gui extends JFrame {
 
     page1 = new Page1(Gui.this);
     page2 = new Page2(Gui.this);
-    page2 = new Page3(Gui.this);
+    page3 = new Page3(Gui.this);
+    page4 = new Page4(Gui.this);
   }
 
   // Getters & Setters
@@ -193,4 +197,16 @@ public class Gui extends JFrame {
   }
 
   public Pages getPage3() { return page3; }
+
+  public JPanel getPagePanel4() {
+    return pagePanel4;
+  }
+
+  public JPanel getMainPanel4() {
+    return mainPanel4;
+  }
+
+  public Pages getPage4() {
+    return page4;
+  }
 }
