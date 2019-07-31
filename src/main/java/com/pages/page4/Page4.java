@@ -6,12 +6,15 @@ import javafx.scene.paint.Color;
 
 import javax.swing.*;
 
+import static javafx.scene.paint.Color.*;
+
 public class Page4 extends JFrame implements Pages {
   private static final long serialVersionUID = 1L;
   private Detector detector;
   private CameraPanel cameraPanel;
   private JPanel mainPanel;
 
+  // Video Face Recognition
   public Page4(Gui gui) {
     this.detector = new Detector();
     this.cameraPanel = new CameraPanel();
