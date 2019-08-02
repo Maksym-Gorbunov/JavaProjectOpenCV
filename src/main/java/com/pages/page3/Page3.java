@@ -2,6 +2,7 @@ package com.pages.page3;
 
 import com.constants.Constants;
 import com.gui.Gui;
+import com.intellij.uiDesigner.core.GridConstraints;
 import com.pages.Pages;
 import com.algoritm.FaceDetection;
 import com.constants.Constants;
@@ -40,6 +41,9 @@ public class Page3  extends JFrame implements Pages {
   private void gui() {
     gui.setJMenuBar(createMenuBar());
     pagePanel.add(imagePanel);
+//    pagePanel.add(imagePanel, new GridConstraints());
+//    pagePanel.setSize(700, 500);
+
 //    pagePanel.add(imagePanel, BorderLayout.CENTER);
 //    setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGTH);
 //    setVisible(true);
