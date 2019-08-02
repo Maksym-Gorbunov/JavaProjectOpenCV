@@ -44,6 +44,7 @@ public class Gui extends JFrame {
   private JButton editButton2;
   private JButton saveButton2;
   private JButton cancelButton2;
+
   private JPanel pagePanel4;
   private JPanel mainPanel4;
 
@@ -63,7 +64,7 @@ public class Gui extends JFrame {
 
     page1 = new Page1(Gui.this);
     page2 = new Page2(Gui.this);
-    page3 = new Page3(Gui.this);
+//    page3 = new Page3(Gui.this);
     page4 = new Page4(Gui.this);
   }
 

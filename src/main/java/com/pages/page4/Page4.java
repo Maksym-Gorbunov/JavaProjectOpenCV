@@ -3,7 +3,8 @@ package com.pages.page4;
 import com.gui.Gui;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.pages.Pages;
-import javafx.scene.paint.Color;
+import java.awt.Color;
+//import javafx.scene.paint.Color;
 import org.opencv.core.Mat;
 import org.opencv.videoio.VideoCapture;
 
@@ -25,17 +26,18 @@ public class Page4 extends JFrame implements Pages {
     this.cameraPanel = new CameraPanel();
     this.mainPanel = gui.getMainPanel4();
 
-    mainPanel.setSize(600, 500);
-    mainPanel.add(cameraPanel, new GridConstraints());
+    mainPanel.setSize(600, 200);
+//    mainPanel.add(cameraPanel);
+//    mainPanel.add(cameraPanel, new GridConstraints());
 //    mainPanel.add(cameraPanel, BorderLayout.CENTER);
-//    mainPanel.setBackground(Color.BLUE);
+    mainPanel.setBackground(Color.BLUE);
 
 //    setContentPane(this.cameraPanel);
 
 //    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //    setSize(600, 500);
 //    setVisible(true);
-    displayScreen();
+//    displayScreen();
   }
 
   public void displayScreen() {
