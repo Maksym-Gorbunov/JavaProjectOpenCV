@@ -45,7 +45,7 @@ public class Page3  extends JFrame implements Pages {
 //    pagePanel.add(imagePanel, new GridConstraints());
 
 //    pagePanel.add(imagePanel, BorderLayout.CENTER);
-//    setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGTH);
+//    setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGHT);
 //    setVisible(true);
 //    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //    setLocationRelativeTo(this);

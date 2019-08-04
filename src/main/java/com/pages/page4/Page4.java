@@ -1,7 +1,7 @@
 package com.pages.page4;
 
+import com.constants.Constants;
 import com.gui.Gui;
-import com.intellij.uiDesigner.core.GridConstraints;
 import com.pages.Pages;
 import java.awt.Color;
 //import javafx.scene.paint.Color;
@@ -10,15 +10,12 @@ import org.opencv.videoio.VideoCapture;
 
 import javax.swing.*;
 
-import java.awt.*;
-
-import static javafx.scene.paint.Color.*;
-
 public class Page4 implements Pages {
   private static final long serialVersionUID = 1L;
   private Detector detector;
   private CameraPanel cameraPanel;
-  private JPanel mainPanel;
+  private JPanel panel;
+  private JPanel webcamPanel;
   private Gui gui;
 
   // Video Face Recognition
@@ -26,26 +23,15 @@ public class Page4 implements Pages {
     this.gui = gui;
     this.detector = new Detector();
     this.cameraPanel = new CameraPanel();
-    this.mainPanel = gui.getPagePanel4();
+    this.panel = gui.getPagePanel4();
 
-    mainPanel.setBackground(Color.GREEN);
-    mainPanel.setLayout(null);
-
-
-//    mainPanel.setPreferredSize(new Dimension(200, 400));
-
-    JPanel jp = new JPanel();
-    jp.setBounds(20,20,200,100);
-    jp.setBackground(Color.RED);
-    mainPanel.add(jp);
+    panel.setLayout(null);
+    webcamPanel = new JPanel();
+    webcamPanel.setBackground(Color.GREEN);
+    webcamPanel.setBounds((Constants.FRAME_WIDTH-600)/2,20,600,500);
+    panel.add(webcamPanel);
 
 
-    JButton b = new JButton("okkk");
-    b.setBounds(10,30,100,20);
-    jp.setLayout(null);
-    jp.add(b);
-
-//    mainPanel.add(b, new GridConstraints());
 
 
 
