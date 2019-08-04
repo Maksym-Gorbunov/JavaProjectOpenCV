@@ -2,8 +2,10 @@ package com.pages.page4;
 
 import com.constants.Constants;
 import com.gui.Gui;
+import com.intellij.uiDesigner.core.GridConstraints;
 import com.pages.Pages;
-import java.awt.Color;
+
+import java.awt.*;
 //import javafx.scene.paint.Color;
 import org.opencv.core.Mat;
 import org.opencv.videoio.VideoCapture;
@@ -21,18 +23,27 @@ public class Page4 implements Pages {
   // Video Face Recognition
   public Page4(Gui gui) {
     this.gui = gui;
-    this.detector = new Detector();
-    this.cameraPanel = new CameraPanel();
-    this.panel = gui.getPagePanel4();
-
-    panel.setLayout(null);
-    webcamPanel = new JPanel();
-    webcamPanel.setBackground(Color.GREEN);
-    webcamPanel.setBounds((Constants.FRAME_WIDTH-600)/2,20,600,500);
-    panel.add(webcamPanel);
+    detector = new Detector();
+    cameraPanel = new CameraPanel();
+//    cameraPanel = new CameraPanel();
+    panel = gui.getPagePanel4();
 
 
+//    panel.setLayout(null);
+//    webcamPanel = new JPanel();
+//    webcamPanel.setBackground(Color.GREEN);
+//    webcamPanel.setBounds((Constants.FRAME_WIDTH-600)/2,10,600,500);
 
+    cameraPanel.setPreferredSize(new Dimension(800, 600));
+
+
+    panel.add(cameraPanel, new GridConstraints());
+
+
+//    panel.add(webcamPanel);
+
+
+    displayScreen();
 
 
   }
@@ -41,14 +52,31 @@ public class Page4 implements Pages {
     Mat webcamImage = new Mat();
     VideoCapture videoCapture = new VideoCapture(0);
 
+//    if (videoCapture.isOpened()) {
+//      while (true) {
+//        videoCapture.read(webcamImage);
+//        if (!webcamImage.empty()) {
+//          setSize(webcamImage.width() + 50, webcamImage.height() + 70);
+//          webcamImage = detector.detect(webcamImage);
+//          cameraPanel.convertMatToImage(webcamImage);
+//          cameraPanel.repaint(); // update camera panel
+//        } else {
+//          System.out.println("Problem");
+//          break;
+//        }
+//      }
+//    }
+
+
 //    cameraPanel.setBackground(Color.BLUE);
     System.gc();
     for (int i = 0; i < 200; i++) {
+      webcamImage = detector.detect(webcamImage);
+      cameraPanel.convertMatToImage(webcamImage);
       cameraPanel.repaint();
-
     }
     videoCapture.read(webcamImage);
 //    setSize(webcamImage.width() + 50, webcamImage.height() + 70);
     cameraPanel.convertMatToImage(webcamImage);
-    }
   }
+}

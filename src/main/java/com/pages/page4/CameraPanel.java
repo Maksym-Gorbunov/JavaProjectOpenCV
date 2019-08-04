@@ -1,19 +1,19 @@
 package com.pages.page4;
 
-import javafx.scene.paint.Color;
 import org.opencv.core.Mat;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
+import java.awt.Color;
 
 public class CameraPanel extends JPanel {
   private static final long serialVersionUID = 1L;
   private BufferedImage bufferedImage;
 
   public CameraPanel() {
-//    setBackground(Color.BLUE);
+    setBackground(Color.BLUE);
   }
 
   // Matrix image BlueGreenRed

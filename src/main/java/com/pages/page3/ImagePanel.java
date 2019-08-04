@@ -15,11 +15,12 @@ public class ImagePanel extends JPanel{
   public ImagePanel(){
     this.imageLabel = new JLabel();
     setLayout(new BorderLayout());
-    setBorder(BorderFactory.createEmptyBorder(Constants.IMAGE_LABEL_BORDER, Constants.IMAGE_LABEL_BORDER,
-            Constants.IMAGE_LABEL_BORDER, Constants.IMAGE_LABEL_BORDER));
+//    setBorder(BorderFactory.createEmptyBorder(Constants.IMAGE_LABEL_BORDER, Constants.IMAGE_LABEL_BORDER,
+//            Constants.IMAGE_LABEL_BORDER, Constants.IMAGE_LABEL_BORDER));
+    setBorder(BorderFactory.createLineBorder(Color.black));
     add(imageLabel, BorderLayout.CENTER);
     setBackground(Color.ORANGE);
-    setSize(700, 500);
+//    setSize(700, 200);
   }
 
   public void updadeImage(final Image image) {

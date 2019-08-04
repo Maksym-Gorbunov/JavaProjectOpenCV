@@ -7,6 +7,7 @@ import com.pages.Pages;
 import com.algoritm.FaceDetection;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,6 +35,7 @@ public class Page3  extends JFrame implements Pages {
 
   private void gui() {
     imagePanel.setPreferredSize(new Dimension(700,500));
+//    imagePanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
     pagePanel.add(imagePanel, new GridConstraints());
     gui.setJMenuBar(createMenuBar());
   }
