@@ -41,8 +41,8 @@ public class Page3  extends JFrame implements Pages {
   private void gui() {
     gui.setJMenuBar(createMenuBar());
     pagePanel.add(imagePanel);
+    pagePanel.setSize(700, 500);
 //    pagePanel.add(imagePanel, new GridConstraints());
-//    pagePanel.setSize(700, 500);
 
 //    pagePanel.add(imagePanel, BorderLayout.CENTER);
 //    setSize(Constants.FRAME_WIDTH, Constants.FRAME_HEIGTH);

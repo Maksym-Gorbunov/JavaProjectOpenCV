@@ -14,23 +14,32 @@ import java.awt.*;
 
 import static javafx.scene.paint.Color.*;
 
-public class Page4 extends JFrame implements Pages {
+public class Page4 implements Pages {
   private static final long serialVersionUID = 1L;
   private Detector detector;
   private CameraPanel cameraPanel;
   private JPanel mainPanel;
+  private Gui gui;
 
   // Video Face Recognition
   public Page4(Gui gui) {
+    this.gui = gui;
     this.detector = new Detector();
     this.cameraPanel = new CameraPanel();
-    this.mainPanel = gui.getMainPanel4();
+    this.mainPanel = gui.getPagePanel4();
+//    this.mainPanel = gui.getMainPanel4();
 
-    mainPanel.setSize(600, 200);
-//    mainPanel.add(cameraPanel);
+    mainPanel.setBackground(Color.GREEN);
+    mainPanel.setSize(600, 500);
 //    mainPanel.add(cameraPanel, new GridConstraints());
 //    mainPanel.add(cameraPanel, BorderLayout.CENTER);
-    mainPanel.setBackground(Color.BLUE);
+//    mainPanel.setBackground(Color.BLUE);
+//    mainPanel.add(cameraPanel);
+//    JPanel c = new JPanel();
+    JButton b = new JButton("Clicskhds");
+    mainPanel.add(b, new GridConstraints());
+
+
 
 //    setContentPane(this.cameraPanel);
 
@@ -51,7 +60,7 @@ public class Page4 extends JFrame implements Pages {
 
     }
     videoCapture.read(webcamImage);
-    setSize(webcamImage.width() + 50, webcamImage.height() + 70);
+//    setSize(webcamImage.width() + 50, webcamImage.height() + 70);
     cameraPanel.convertMatToImage(webcamImage);
     }
   }
