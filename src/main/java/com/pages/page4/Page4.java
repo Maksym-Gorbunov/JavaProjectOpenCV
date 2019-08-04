@@ -27,26 +27,28 @@ public class Page4 implements Pages {
     this.detector = new Detector();
     this.cameraPanel = new CameraPanel();
     this.mainPanel = gui.getPagePanel4();
-//    this.mainPanel = gui.getMainPanel4();
 
     mainPanel.setBackground(Color.GREEN);
-    mainPanel.setSize(600, 500);
-//    mainPanel.add(cameraPanel, new GridConstraints());
-//    mainPanel.add(cameraPanel, BorderLayout.CENTER);
-//    mainPanel.setBackground(Color.BLUE);
-//    mainPanel.add(cameraPanel);
-//    JPanel c = new JPanel();
-    JButton b = new JButton("Clicskhds");
-    mainPanel.add(b, new GridConstraints());
+    mainPanel.setLayout(null);
+
+
+//    mainPanel.setPreferredSize(new Dimension(200, 400));
+
+    JPanel jp = new JPanel();
+    jp.setBounds(20,20,200,100);
+    jp.setBackground(Color.RED);
+    mainPanel.add(jp);
+
+
+    JButton b = new JButton("okkk");
+    b.setBounds(10,30,100,20);
+    jp.setLayout(null);
+    jp.add(b);
+
+//    mainPanel.add(b, new GridConstraints());
 
 
 
-//    setContentPane(this.cameraPanel);
-
-//    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//    setSize(600, 500);
-//    setVisible(true);
-//    displayScreen();
   }
 
   public void displayScreen() {
