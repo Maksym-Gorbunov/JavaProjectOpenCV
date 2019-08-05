@@ -46,6 +46,9 @@ public class Gui extends JFrame {
   private JButton cancelButton2;
 
   private JPanel pagePanel4;
+  private JButton button1;
+  private JButton button2;
+  private JPanel video;
   private JPanel buttonsPannel4;
   private JButton button41;
   private JButton button42;
