@@ -7,7 +7,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-package com.gui;
+package com.pages.page4;
 
 import java.awt.Graphics;
 import java.awt.Image;
@@ -23,15 +23,12 @@ import org.opencv.core.MatOfRect;
 import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
-import org.opencv.core.Size;
-import org.opencv.*;
 //import org.opencv.highgui.Highgui;
 //import org.opencv.highgui.VideoCapture;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.videoio.VideoCapture;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
-import org.opencv.videoio.VideoCapture;
 
 /**
  *
