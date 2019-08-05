@@ -64,16 +64,16 @@ public class Page4 implements Pages {
   public Page4(Gui gui) {
     this.gui = gui;
     panel = gui.getPagePanel4();
-    jPanel1 = new JPanel();
-    jButton1 = new JButton();
-    jButton2 = new JButton();
-    buttonsPannel = new JPanel();
-    mainPanel = gui.getPagePanel4();
+//    jPanel1 = new JPanel();
+//    jButton1 = new JButton();
+//    jButton2 = new JButton();
+//    buttonsPannel = new JPanel();
+//    mainPanel = gui.getPagePanel4();
 
 
 
 
-    mainPanel.setBackground(Color.green);
+//    mainPanel.setBackground(Color.green);
 //    mainPanel.setPreferredSize(new Dimension(600,500));
 //    mainPanel.setSize(600, 500);
 
@@ -97,7 +97,7 @@ public class Page4 implements Pages {
 //    panel.add(jPanel1);
 //    panel.add(buttonsPannel);
 
-    initComponents();
+//    initComponents();
 
 
   }
