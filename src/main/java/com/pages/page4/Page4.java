@@ -3,6 +3,7 @@ package com.pages.page4;
 import com.constants.Constants;
 import com.gui.Gui;
 import com.intellij.uiDesigner.core.GridConstraints;
+import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.pages.Pages;
 
 import java.awt.*;
@@ -53,7 +54,7 @@ public class Page4 implements Pages {
   MatOfByte mem = new MatOfByte();
   CascadeClassifier faceDetector = new CascadeClassifier(Constants.CASCADE_CLASSIFIER);
   MatOfRect faceDetections = new MatOfRect();
-
+  JPanel mainPanel;
 
 
 
@@ -67,14 +68,35 @@ public class Page4 implements Pages {
     jButton1 = new JButton();
     jButton2 = new JButton();
     buttonsPannel = new JPanel();
+    mainPanel = gui.getPagePanel4();
 
-    jPanel1.setPreferredSize(new Dimension(400, 300));
-    jPanel1.setBackground(Color.orange);
-    panel.add(jPanel1, new GridConstraints());
 
-    buttonsPannel.add(jButton1, new GridConstraints());
+
+
+    mainPanel.setBackground(Color.green);
+//    mainPanel.setPreferredSize(new Dimension(600,500));
+//    mainPanel.setSize(600, 500);
+
+//    jPanel1.setPreferredSize(new Dimension(400, 300));
+//    jPanel1.setBackground(Color.orange);
+//    buttonsPannel.setBackground(Color.blue);
+
+//    buttonsPannel.setPreferredSize(new Dimension(500,100));
+//    buttonsPannel.add(jButton1, new GridConstraints());
 //    panel.add(jButton2, new GridConstraints());
-    panel.add(buttonsPannel, new GridConstraints());
+
+//    panel.setLayout(new GridLayoutManager(2,1));
+//    panel.setLayout(new GridLayoutManager(2,1));
+//    panel.setLayout(new GridLayoutManager(2,1));
+//    panel.add(jPanel1, );
+//    panel.add(buttonsPannel);
+//    panel.add(jPanel1, BorderLayout.NORTH);
+//    panel.add(buttonsPannel, BorderLayout.SOUTH);
+//    gui.pack();
+
+//    panel.add(jPanel1);
+//    panel.add(buttonsPannel);
+
     initComponents();
 
 
