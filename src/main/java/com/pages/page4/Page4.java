@@ -94,8 +94,6 @@ public class Page4 implements Pages {
 //    panel.add(buttonsPannel, BorderLayout.SOUTH);
 //    gui.pack();
 
-//    panel.add(jPanel1);
-//    panel.add(buttonsPannel);
 
 //    initComponents();
 
