@@ -67,6 +67,7 @@ public class Gui extends JFrame {
     setLocationRelativeTo(this);
     setResizable(false);
     setVisible(true);
+    //move to new project
 
     page1 = new Page1(Gui.this);
     page2 = new Page2(Gui.this);
